@@ -1,0 +1,55 @@
+{% extends 'base/base_content.html' %}
+{% load static %}
+
+
+{% block extra_header %}
+		<link href="{% static 'css/renta_autos.css' %}" rel="stylesheet" />
+{% endblock extra_header %}
+
+
+
+{% block module_content %}
+		<section class="client-list-container" id="client-auditoria-section">		
+			<div class="container">
+				<nav aria-label="breadcrumb mt-3 mb-5">
+					<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Home</a></li>
+					<li class="breadcrumb-item"><a href="{% url 'renta_autos:renta_autos_module' %}">Renta Autos Modulo</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Auditoria</li>
+					</ol>
+				</nav>	
+				<div class="row">
+					<div class="col-12">
+						{% csrf_token %}
+						<div class="card">
+							<div class="card-header bg-primary fw-bold">
+							  REGISTRO DE ACCCIONES
+							</div>
+							<div class="card-body">
+								<table class="table table-sm" id="table_{{ section_name }}">
+									<thead>
+										<tr>
+											<th scope="col">Fecha:</th>
+											<th scope="col">Registro involucrado:</th>
+											<th scope="col">Realizado por:</th>
+											<th scope="col">Tipo de Accion:</th>
+										</tr>
+									</thead>
+									<tbody>
+									</tbody>
+							  </table>
+							</div>
+							<div class="col">
+								<div class="div pagination-box"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+{% endblock module_content %}
+
+{% block extra_javascript %}
+	<script src="{% static 'js/renta_autos/auditoria/auditoria.js' %}"></script>
+{% endblock extra_javascript %}

@@ -1,0 +1,61 @@
+.client-list-container {
+    margin-top: 3rem;
+    padding: 1.3rem;
+    margin-bottom: 10.5rem;
+}
+
+.post {
+    border-bottom: 1px solid #adb5bd;
+    color: #666;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.post .user-block {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.user-block {
+    float: left;
+}
+
+.link-black {
+    color: #6c757d;
+}
+
+.user-block .username {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: -1px;
+}
+
+.user-block .description {
+    color: #6c757d;
+    font-size: 13px;
+    margin-top: -3px;
+}
+
+.user-block img {
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+img {
+    vertical-align: middle;
+    /* border-style: none; */
+}
+
+.checkbox-overflow {
+    overflow-y: scroll;
+    height: 15rem;
+}
+
+.fa-arrows-alt {
+    color: #fff;
+}

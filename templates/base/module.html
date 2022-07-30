@@ -1,0 +1,46 @@
+{% extends 'base/base_content.html' %}
+{% load static %}
+
+
+{% block extra_header %}
+		<link href="{% static 'css/renta_autos.css' %}" rel="stylesheet" />
+{% endblock extra_header %}
+
+
+
+{% block module_content %}
+
+    <section class="container module-section" id="{{ section_name }}Module">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'pages:home' %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ module_name }}</li>
+            </ol>
+        </nav>
+
+        <div class="row justify-content-start">
+            <div class="col-4">
+                <div class="card text-white bg-success mb-3" style="width: 18rem;">
+                    <div class="card-body" style="text-align: center;">
+                      <i class="fa fa-id-card fa-4x" aria-hidden="true" ></i>
+                      <h5 class="card-title mt-3 module-title">Clientes</h5>
+                    </div>
+                    <div class="card-footer bg-transparent border-light" style="text-align: center;">
+                        <a href="{{ client_list_url }}" class="btn btn-sm btn-secondary fw-bold">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card text-white bg-primary mb-3" style="width: 18rem;">
+                    <div class="card-body" style="text-align: center;">
+                      <i class="fa fa-search fa-4x" aria-hidden="true"></i>
+                      <h5 class="card-title mt-3">Auditoria</h5>
+                    </div>
+                    <div class="card-footer bg-transparent border-light" style="text-align: center;">
+                        <a href="{{ auditoria_url }}" class="btn btn-sm btn-secondary fw-bold">Ver más <i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock module_content %}

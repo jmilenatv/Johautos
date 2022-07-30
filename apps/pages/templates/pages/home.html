@@ -1,0 +1,81 @@
+{% extends 'base/base_content.html' %}
+{% load static %}
+
+
+{% block extra_header %}
+		<link href="{% static 'css/renta_autos.css' %}" rel="stylesheet" />
+{% endblock extra_header %}
+
+
+
+{% block module_content %}
+    <section class="container" id="HomeSection">
+            <!-- Page Heading -->
+            <h1 class="my-4">Lineas de Negocios</h1>
+          
+            <div class="row">
+              <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                  <a href="{% url 'renta_autos:renta_autos_module' %}"><img class="card-img-top" src="{% static 'src/img/rent_car.jpg' %}" alt="Renta de Autos"></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="{% url 'renta_autos:renta_autos_module' %}">Renta de Autos</a>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                  <a href="#"><img class="card-img-top" src="{% static 'src/img/car_services.jpg' %}" alt="Servicio para autos"></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#">Servicios de Autos</a>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                  <a href="#"><img class="card-img-top" src="{% static 'src/img/car_parts.jpg' %}" alt="Partes de Autos"></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#">Partes y Repuestos de Autos</a>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                  <a href="#"><img class="card-img-top" src="{% static 'src/img/cojineria.jpg' %}" alt="Cojineria y accesorios de autos"></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#">Articulos de Autos</a>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                  <a href="#"><img class="card-img-top" src="{% static 'src/img/seguros.jpg' %}" alt="Seguros para autos"></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#">Seguros</a>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                  <a href="#"><img class="card-img-top" src="{% static 'src/img/test driving.jpg' %}" alt="Academia de conduccion"></a>
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      <a href="#">Academia de conducción</a>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.row -->          
+
+    </section>
+{% endblock module_content %}

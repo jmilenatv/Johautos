@@ -1,0 +1,104 @@
+/* Sorry for the CSS order. I'm not Frontend Developer :c */
+
+#result-count,
+#page-count {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-top: 1.2rem;
+}
+
+.maku-text {
+    font-family: 'Mukta', sans-serif;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+.login-body {
+    background-image: url("/static/src/bg/sep09.jpg");
+    /* background-size: auto; */
+    background-repeat: no-repeat;
+    background-size: 1600px 1000px;
+}
+
+.card-img-left {
+    width: 45%;
+    background: scroll center url("/static/src/bg/various-work-tools-worktop.jpg");
+    background-size: cover;
+}
+
+.dot{
+    font-size: 6px !important;
+}
+
+#dot {
+    color: rgb(117, 15, 52);
+}
+
+.navbar-brand {
+    font-weight: 800;
+}
+
+.attachment-img {
+    filter: blur(4px);
+}
+
+tbody {
+    font-size: 12px;
+}
+
+
+.module-section {
+    margin-bottom: 13rem;
+    margin-top: 1.5rem;
+}
+
+
+.fa {
+    color: rgba(0,0,0,.15);
+}
+
+.fa-undo{
+    color: #ffff !important;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.profile-user-img {
+    border: 3px solid #adb5bd;
+    margin: 0 auto;
+    padding: 3px;
+    width: 100px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.skeleton-text {
+    background: hsl(200, 20%, 80%);
+    width: 50%;
+    height: 0.7rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.skeleton-text-2 {
+    background: hsl(200, 20%, 80%);
+    width: 25%;
+    height: 0.7rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.skeleton-text-3 {
+    background: hsl(200, 20%, 80%);
+    width: 35%;
+    height: 0.7rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+}

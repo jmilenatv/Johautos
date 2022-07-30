@@ -1,0 +1,19 @@
+<nav class="navbar shadow navbar-expand-lg bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'pages:home' %}">AUTO <span style="color: rgb(117, 15, 52)">A</span>PP <span class="dot"><i id="dot" class="fa fa-circle fa-1x" aria-hidden="true"></i></span></a>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                {% if user.is_authenticated %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: grey;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ user.username }}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                {% endif %} 
+            </ul>
+        </div>
+    </div>
+</nav>

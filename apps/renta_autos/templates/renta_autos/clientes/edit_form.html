@@ -1,0 +1,97 @@
+{% load static %}
+
+<form action="." method="POST" id="RentaAutoEditClientForm">
+    {% csrf_token %}
+    <div class="row justify-content-end mb-4">
+        <div class="col-md-2">
+            <button type="button" onclick='editRecordDetail("{{ cli.id_uuid }}")' class="btn btn-sm btn-warning"><i class='fas fa-edit'></i></button>
+            <button type="button" class="btn btn-sm btn-danger"><i class='fas fa-trash-alt'></i></button>
+        </div>
+    </div>
+    <div class="row container">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-success">
+                    <h3 class="card-title">{{ cli.user_name }}</h3>
+                    <div class="d-none user-id" id="{{ cli.id_uuid }}"></div>
+                </div>
+                
+                <div class="card-body">
+                    <strong><i class="fas fa-book mr-1"></i> Datos Bancarios</strong>
+                    <p class="text-muted">
+                        Nro. de Cuenta: {{ nro_cta }}
+                    </p>
+                    <p class="text-muted">
+                        Credit Card Num: 
+                    </p>
+                    <div class="skeleton-text"></div>
+                        
+                    <p class="text-muted">
+                        CVV:
+                    </p>
+                    <div class="skeleton-text-2"></div>
+                    <hr>
+                    <strong><i class="fas fa-map-marker-alt mr-1"></i> Dirección</strong>
+                    <div class="form-group mt-3">
+                        <label class="fw-bold">{{ form.codigo_zip.label }}:</label>
+                        {{ form.codigo_zip }}
+                    </div>
+
+                    
+                    <div class="skeleton-text"></div>
+                    <div class="skeleton-text-3"></div>
+                    <p class="text-muted">Geo latitud: </p>
+                    <div class="skeleton-text-2"></div>
+                    <p class="text-muted">Geo longitud: </p>
+                    <div class="skeleton-text-2"></div>
+
+                    <hr>
+                    <strong><i class="fas fa-pencil-alt mr-1"></i> Datos Personales</strong>
+                    <!-- <p class="text-muted">
+                        Fecha de Nacimiento: ${data.fec_birthday}
+                    </p> -->
+                    <div class="form-group mt-3">
+                        <label class="fw-bold">{{ form.fec_birthday.label }}:</label>
+                        {{ form.fec_birthday }}
+                    </div>
+                    <div class="form-group">
+                        <label class="fw-bold">{{ form.color_favorito.label }}:</label>
+                        {{ form.color_favorito }}
+                    </div>
+
+
+                    <span class="skeleton-text"></span> 
+                    <hr>
+                    <strong><i class="far fa-file-alt mr-1"></i> Autos Rentados</strong>
+                    <ul class="list-unstyled">
+                        {% for renta in rentas %}
+                            <li>{{ renta.auto.auto_name }}:
+                                <ul>
+                                    <li>Modelo: {{ renta.auto.modelo }}</li>
+                                    <li>Tipo: {{ renta.auto.tipo }}</li>
+                                    <li>Color: {{ renta.auto.color }}</li>
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-5" style="width: 16rem;">
+                <img src="{% static 'src/img/user_no_profile.png' %}" class="card-img-top profile-user-img img-fluid img-circle" alt="...">
+                <div class="card-body text-center">
+                <h5 class="card-title">Avatar</h5>
+                </div>
+            </div>
+            <div class="card" style="width: 16rem;">
+                <img src="{% static 'src/img/dni_black.png' %}" class="card-img-top" alt="..." style="height: 15rem;">
+                <div class="card-body text-center" style="padding-top: 0;">
+                <h5 class="card-title">DNI</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
